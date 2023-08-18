@@ -21,8 +21,8 @@ def api_welcome():
 '============================================'
 
 # Set destination files we need
-dir_path = '/Users/olivierdebeyssac/Open_Classrooms/Data_scientist/Projet_7/Data'
-
+#dir_path = '/Users/olivierdebeyssac/Open_Classrooms/Data_scientist/Projet_7/Data'
+dir_path = 'data'
 
 file_name_X_test = 'X_test.csv'
 destination_path_X_test = dir_path + '/' + file_name_X_test
