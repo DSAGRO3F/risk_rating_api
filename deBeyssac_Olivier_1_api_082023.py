@@ -18,11 +18,10 @@ app.config["DEBUG"] = True
 def api_welcome():
     return "<h1>Welcome to home credit application<h1><p>This application is for evaluating client eligibility to credit<p>"
 
-'============================================'
 
 # Set destination files we need
 #dir_path = '/Users/olivierdebeyssac/Open_Classrooms/Data_scientist/Projet_7/Data'
-dir_path = 'data'
+dir_path = 'Data'
 
 file_name_X_test = 'X_test.csv'
 destination_path_X_test = dir_path + '/' + file_name_X_test
@@ -34,7 +33,6 @@ destination_path_X_train = dir_path + '/' + file_name_X_train
 file_name_y_train = 'y_train.csv'
 destination_path_y_train = dir_path + '/' + file_name_y_train
 
-'============================================'
 
 # Set api to serve X_test dataset (for the user to be able to choose client)
 @app.route('/get_X_test_data', methods=['GET', 'POST'])
@@ -53,7 +51,6 @@ def get_test_data_set():
 #print(get_test_data_set())
 
 
-'============================================'
 
 @app.route('/get_input_data/<customer_id>', methods=['GET', 'POST'])
 def file(customer_id):
@@ -99,7 +96,6 @@ def file(customer_id):
 
     return jsonify(wrap)
 
-'============================================'
 
 @app.route('/feat_imp/<customer_id>',methods=['GET'])
 def feat_imp(customer_id):
@@ -168,4 +164,3 @@ def feat_imp(customer_id):
 
 #app.run()
 
-'============================================'
