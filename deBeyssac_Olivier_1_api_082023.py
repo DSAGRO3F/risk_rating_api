@@ -21,20 +21,19 @@ def api_welcome():
 
 # Set destination files we need
 #dir_path = '/Users/olivierdebeyssac/Open_Classrooms/Data_scientist/Projet_7/Data'
-#dir_path = 'Data'
+dir_path = 'Data'
 
 file_name_X_test = 'X_test.csv'
-#destination_path_X_test = dir_path + '/' + file_name_X_test
-destination_path_X_test = file_name_X_test
+destination_path_X_test = dir_path + '/' + file_name_X_test
 
 
 file_name_X_train = 'X_train.csv'
-#destination_path_X_train = dir_path + '/' + file_name_X_train
-destination_path_X_train = file_name_X_train
+destination_path_X_train = dir_path + '/' + file_name_X_train
+
 
 file_name_y_train = 'y_train.csv'
-#destination_path_y_train = dir_path + '/' + file_name_y_train
-destination_path_y_train = file_name_y_train
+destination_path_y_train = dir_path + '/' + file_name_y_train
+
 
 # Set api to serve X_test dataset (for the user to be able to choose client)
 @app.route('/get_X_test_data', methods=['GET', 'POST'])
