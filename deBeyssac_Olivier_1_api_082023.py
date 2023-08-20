@@ -74,8 +74,9 @@ def file(customer_id):
 
     # Read model object
     #Models = '/Users/olivierdebeyssac/Open_Classrooms/Data_scientist/Projet_7/Livrables/Models'
-    Models = 'Models'
-    model = Models + '/' + 'model.pkl'
+    #Models = 'Models'
+    #model = Models + '/' + 'model.pkl'
+    model = 'model.pkl'
     fichier = open(model, 'rb')
     rf = pickle.load(fichier)
 
@@ -102,8 +103,9 @@ def file(customer_id):
 def feat_imp(customer_id):
     # Load random forest model. We need that step to get feature importance.
     #Models = '/Users/olivierdebeyssac/Open_Classrooms/Data_scientist/Projet_7/Livrables/Models'
-    Models = 'Models'
-    model = Models + '/' + 'model.pkl'
+    #Models = 'Models'
+    #model = Models + '/' + 'model.pkl'
+    model = 'model.pkl'
     fichier = open(model, 'rb')
     rf = pickle.load(fichier)
 
